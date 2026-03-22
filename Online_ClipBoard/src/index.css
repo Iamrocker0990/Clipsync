@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #15803d; /* Forest Green 700 */
+  --color-primary-dark: #166534;
+  --color-primary-light: #4ade80;
+  --color-cream: #fdfbf7; /* Warm Off-White */
+  --color-forest: #061a15; /* High-contrast Deep Green/Black */
+  --color-moss: #3f6212;
+}
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light;
+  background-color: #fdfbf7; /* Cream background */
+  color: #061a15; /* Forest black for text */
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  background-color: #fdfbf7;
+}
+
+#root {
+  width: 100%;
+}
+
+.forest-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(21, 128, 61, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.forest-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 30px rgba(21, 128, 61, 0.08);
+  border-color: #15803d44;
+}
+
+/* Custom transitions */
+.transition-forest {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Scrollbar Refinement */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #15803d22;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #15803d;
+}
+
+/* Firefox scrollbar support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #15803d22 transparent;
+}
